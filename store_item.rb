@@ -16,26 +16,14 @@ puts "#{shirt["color"]} #{shirt["price"]} #{shirt["material"]}"
 puts "#{skirt["color"]} #{skirt["price"]} #{skirt["material"]}"
 
 class Item
+
+  attr_reader :color, :price, :material
+  attr_writer :color
+
   def initialize(input_color, input_price, input_material)
     @color = input_color
     @price = input_price
     @material = input_material
-  end
-
-  def color
-    @color
-  end
-
-  def price
-    @price
-  end
-
-  def material
-    @material
-  end
-
-  def color= (new_color)
-    @color = new_color
   end
 
   def print_info
