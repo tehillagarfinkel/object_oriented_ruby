@@ -20,10 +20,10 @@ class Item
   attr_reader :color, :price, :material
   attr_writer :color
 
-  def initialize(input_color, input_price, input_material)
-    @color = input_color
-    @price = input_price
-    @material = input_material
+  def initialize(input_info)
+    @color = input_info[:color]
+    @price = input_info[:price]
+    @material = input_info[:material]
   end
 
   def print_info
@@ -32,11 +32,12 @@ class Item
 
 end
 
-dress = Item.new("pink", 34, "cotton")
-shirt = Item.new("blue", 23, "polyester")
-skirt = Item.new("green", 19, "wool")
+dress = Item.new({color: "pink", price: 34, material: "cotton"})
+shirt = Item.new({color: "blue", price: 23, material: "polyester"})
+skirt = Item.new color: "green",price: 19, material: "wool"
 dress.print_info
 dress.color = "aqua"
-
 dress.print_info
+
+
 
