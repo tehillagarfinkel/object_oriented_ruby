@@ -39,7 +39,6 @@ class Manager < Employee
     i = 0
     while i < @employees.length
       @employees[i].give_annual_raise
-      p @employees[i].salary
       i += 1
     end
   end
@@ -48,7 +47,6 @@ class Manager < Employee
     i = 0
     while i < @employees.length
       @employees[i].active = false
-      p @employees[i].active
       i += 1
     end
   end
