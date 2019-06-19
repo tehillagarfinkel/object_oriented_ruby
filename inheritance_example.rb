@@ -21,7 +21,7 @@ class Car < Vehicle
   attr_reader :make, :model
 
   def initialize(input_options)
-    super ()
+    super()
     @make = input_options[:make]
     @model = input_options[:model]
   end
