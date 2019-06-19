@@ -18,6 +18,14 @@ class Vehicle
 end
 
 class Car < Vehicle
+  attr_reader :make, :model
+
+  def initialize(input_options)
+    super ()
+    @make = input_options[:make]
+    @model = input_options[:model]
+  end
+
   def honk_horn
     puts "Beeeeeeep!"
   end
@@ -29,9 +37,10 @@ class Bike < Vehicle
   end
 end
 
-car = Car.new
+car = Car.new(make: "Toyota", model: "Sienna")
 p car.accelerate
 car.honk_horn
+p car.make
 
 bike = Bike.new
 p bike.accelerate
