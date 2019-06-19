@@ -1,9 +1,4 @@
 module VehiclePropertyGivable
-  def initialize
-    @speed = 0
-    @direction = "north"
-  end
-
   def brake
     @speed = 0
   end
@@ -20,6 +15,11 @@ end
 class Car
   include VehiclePropertyGivable
 
+  def initialize
+    @speed = 0
+    @direction = "north"
+  end
+
   def honk_horn
     puts "Beeeeeeep!"
   end
@@ -27,6 +27,11 @@ end
 
 class Bike
   include VehiclePropertyGivable
+
+  def initialize
+    @speed = 0
+    @direction = "north"
+  end
 
   def ring_bell
     puts "Ring ring!"
